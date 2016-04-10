@@ -1,6 +1,6 @@
 {
   "name": "diet-static-middleware",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "",
   "homepage": "",
   "keywords": [],
@@ -15,7 +15,8 @@
   },
   "dependencies": {
     "send": "0.13.2",
-    "mime": "1.3.4"
+    "mime": "1.3.4",
+    "underscore": "1.8.3"
   },
   "devDependencies": {
     "eslint": "2.7.0",
