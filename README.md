@@ -1,5 +1,11 @@
 # diet-static-middleware
+[![npm version](https://img.shields.io/npm/v/diet-static-middleware.svg)](https://npmjs.com/package/diet-static-middleware)
+[![npm downloads](https://img.shields.io/npm/dm/diet-static-middleware.svg)](https://npmjs.com/package/diet-static-middleware)
+[![dependencies](https://david-dm.org/UndefinedLab/diet-static-middleware.svg)](https://david-dm.org/UndefinedLab/diet-static-middleware)
+[![license](https://img.shields.io/npm/l/diet-static-middleware.svg)](https://github.com/UndefinedLab/diet-static-middleware/blob/master/LICENSE)
 
+A middleware to serve static content for Diet.js.
+It can serve all kinds of files and be used as a CDN solution. Works entirely using streams, and doesn't blow your RAM. Caching and 'powered by' headers can be configured using options.
 
 ## **Install**
 ```
@@ -9,37 +15,39 @@ npm install diet-static-middleware
 ## **Usage**
 
 ```js
+'use strict';
 
-// Initialize Server
-var server = require('diet') // Require Diet
-var app = server()           // Create App
-app.listen(8000)             // Configure Domain
+const server = require('diet');
+const app = server().listen(8000);
 
-// Require diet-static
-var static = require('diet-static')({
-path: app.path + '/static'
-})
+const static = require('diet-static-middleware')({
+path: app.path + '/path/to/your/static/folder'
+});
 
-// Attach static as a global footer
 app.footer(static);
 ```
 
-Now your app will serve every URL with a file that has a mimeType and it's NOT associated with a custom route by `app.get` or `app.post` relative to the path configration.
-
+## **Options**
+User options, that configure `diet-static-middleware`.
 ```js
-// http://localhost:8000/people.json		--> `/path/to/your_app/static/people.json`
-// http://localhost:8000/favicon.ico		--> `/path/to/your_app/static/favicon.ico`
-// http://localhost:8000/scripts/global.js	--> `/path/to/your_app/static/scripts/global.js`
-// http://localhost:8000/styles/global.css	--> `/path/to/your_app/static/styles/global.css`
-// http://localhost:8000/images/logo.png	--> `/path/to/your_app/static/images/logo.png`
+require('diet-static-middleware')({
+    path: app.path+'/path/to/your/static/folder', // path to folder where you store files
+    	cache: 'public', // type of cache. May be public or private
+    	expires: 604800000, // expires time
+    	powered: 'ASP.NET', // powered by (for security)
+    	server: 'Microsoft-IIS/7.5' // server (for security)
+})
 ```
 
-## **Config**
-Configs are optional for `diet-static`.
+## **Finally**
+Every route associated with file on storage
+
 ```js
-require('diet-static')({
-    path: app.path+'/static' // the folder to server files from
-})
+// http://localhost:8000/nation.json		--> `/path/to/your/static/folder/favicon.json`
+// http://localhost:8000/favicon.ico		--> `/path/to/your/static/folder/favicon.ico`
+// http://localhost:8000/android/app-realise.apk	--> `/path/to/your/static/folder/android/app-realise.apk`
+// http://localhost:8000/styles/global.css	--> `/path/to/your/static/folder/styles/global.css`
+// http://localhost:8000/company/logo.png	--> `/path/to/your/static/folder/company/logo.png`
 ```
 
 ## **License**
