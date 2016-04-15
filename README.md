@@ -32,19 +32,19 @@ User options, that configure `diet-static-middleware`.
 ```js
 require('diet-static-middleware')({
     path: app.path+'/path/to/your/static/folder', // path to folder where you store files
-    	cache: 'public', // type of cache. May be public or private
-    	expires: 604800000, // expires time
-    	powered: 'ASP.NET', // powered by (for security)
-    	server: 'Microsoft-IIS/7.5' // server (for security)
-})
+    cache: 'public', // type of cache. May be public or private
+    expires: 604800000, // expires time
+    powered: 'ASP.NET', // powered by (for security)
+    server: 'Microsoft-IIS/7.5' // server (for security)
+});
 ```
 
 ## **Finally**
 Every route associated with file on storage
 
 ```js
-// http://localhost:8000/nation.json		--> `/path/to/your/static/folder/favicon.json`
-// http://localhost:8000/favicon.ico		--> `/path/to/your/static/folder/favicon.ico`
+// http://localhost:8000/nation.json	--> `/path/to/your/static/folder/favicon.json`
+// http://localhost:8000/favicon.ico	--> `/path/to/your/static/folder/favicon.ico`
 // http://localhost:8000/android/app-realise.apk	--> `/path/to/your/static/folder/android/app-realise.apk`
 // http://localhost:8000/styles/global.css	--> `/path/to/your/static/folder/styles/global.css`
 // http://localhost:8000/company/logo.png	--> `/path/to/your/static/folder/company/logo.png`
