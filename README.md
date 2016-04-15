@@ -1,4 +1,5 @@
 # diet-static-middleware
+
 [![npm version](https://img.shields.io/npm/v/diet-static-middleware.svg)](https://npmjs.com/package/diet-static-middleware)
 [![npm downloads](https://img.shields.io/npm/dm/diet-static-middleware.svg)](https://npmjs.com/package/diet-static-middleware)
 [![dependencies](https://david-dm.org/UndefinedLab/diet-static-middleware.svg)](https://david-dm.org/UndefinedLab/diet-static-middleware)
