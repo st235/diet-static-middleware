@@ -1,5 +1,4 @@
 # diet-static-middleware
-**Static file server for diet based on send.** A streaming static file server supporting partial responses (Ranges), conditional-GET negotiation, high test coverage, and granular events which may be leveraged to take appropriate actions in your application or framework.
 
 
 ## **Install**
@@ -17,7 +16,9 @@ var app = server()           // Create App
 app.listen(8000)             // Configure Domain
 
 // Require diet-static
-var static = require('diet-static')({ path: app.path + '/static' })
+var static = require('diet-static')({
+path: app.path + '/static'
+})
 
 // Attach static as a global footer
 app.footer(static);
