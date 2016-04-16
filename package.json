@@ -1,6 +1,6 @@
 {
   "name": "diet-static-middleware",
-  "version": "0.8.7",
+  "version": "0.8.8",
   "description": "A middleware to serve static content for Diet.js.",
   "homepage": "https://github.com/UndefinedLab/diet-static-middleware",
   "keywords": ["diet", "static", "middleware", "files", "media", "rest", "get", "images", "music", "video"],
