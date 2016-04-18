@@ -2,8 +2,8 @@
 
 [![npm version](https://img.shields.io/npm/v/diet-static-middleware.svg)](https://npmjs.com/package/diet-static-middleware)
 [![npm downloads](https://img.shields.io/npm/dm/diet-static-middleware.svg)](https://npmjs.com/package/diet-static-middleware)
-[![dependencies](https://david-dm.org/UndefinedLab/diet-static-middleware.svg)](https://david-dm.org/UndefinedLab/diet-static-middleware)
-[![license](https://img.shields.io/npm/l/diet-static-middleware.svg)](https://github.com/UndefinedLab/diet-static-middleware/blob/master/LICENSE)
+[![dependencies](https://david-dm.org/UniQLab/diet-static-middleware.svg)](https://david-dm.org/UniQLab/diet-static-middleware)
+[![license](https://img.shields.io/npm/l/diet-static-middleware.svg)](https://github.com/UniQLab/diet-static-middleware/blob/master/LICENSE)
 
 A middleware to serve static content for Diet.js.
 It can serve all kinds of files and be used as a CDN solution. Works entirely using streams, and doesn't blow your RAM. Caching and 'powered by' headers can be configured using options.
