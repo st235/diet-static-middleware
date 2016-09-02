@@ -44,7 +44,7 @@ require('diet-static-middleware')({
 Every route associated with file on storage
 
 ```js
-// http://localhost:8000/nation.json	--> `/path/to/your/static/folder/favicon.json`
+// http://localhost:8000/nation.json	--> `/path/to/your/static/folder/nation.json`
 // http://localhost:8000/favicon.ico	--> `/path/to/your/static/folder/favicon.ico`
 // http://localhost:8000/android/app-realise.apk	--> `/path/to/your/static/folder/android/app-realise.apk`
 // http://localhost:8000/styles/global.css	--> `/path/to/your/static/folder/styles/global.css`
