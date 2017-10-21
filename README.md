@@ -35,8 +35,8 @@ require('diet-static-middleware')({
     path: app.path+'/path/to/your/static/folder', // path to folder where you store files
     cache: 'public', // type of cache. May be public or private
     expires: 604800000, // expires time
-    powered: 'ASP.NET', // powered by (for security)
-    server: 'Microsoft-IIS/7.5' // server (for security)
+    powered: 'diet-static-uniqlab', // powered by (for security)
+    server: 'uniqlab-nodejs' // server (for security)
 });
 ```
 
