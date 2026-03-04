@@ -19,7 +19,7 @@
   },
   "dependencies": {
     "mime": "2.0.3",
-    "moment": "2.20.1",
+    "moment": "2.29.4",
     "underscore": "1.13.8"
   },
   "devDependencies": {
